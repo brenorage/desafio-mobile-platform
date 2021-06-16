@@ -1,0 +1,16 @@
+name: iOS starter workflow
+
+on:
+  push:
+    branches: [ master, develop ]
+
+jobs:
+  build:
+    name: Test desafio App
+    runs-on: macos-latest
+
+    steps:
+      - name: Fastlane Action
+        uses: maierj/fastlane-action@v2.0.1
+        with:
+          lane: 'unit_test'
