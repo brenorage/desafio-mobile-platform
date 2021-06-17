@@ -3,7 +3,9 @@ name: iOS Pull Request Workflow
 on:
   pull_request:
     branches: [ master, develop ]
-
+  push:
+    branches: [ master, develop ]
+    
 jobs:
   build:
     name: Test desafio App
