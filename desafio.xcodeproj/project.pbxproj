@@ -26,11 +26,11 @@
 		C4C820FD267FA07200B331EE /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C820F6267FA07200B331EE /* NibLoadable.swift */; };
 		C4C820FE267FA07200B331EE /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C820F8267FA07200B331EE /* UICollectionView+Reusable.swift */; };
 		C4C820FF267FA07200B331EE /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C820F9267FA07200B331EE /* Reusable.swift */; };
-		C4C82109267FA24A00B331EE /* AdsListViewControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C82108267FA24A00B331EE /* AdsListViewControllerTestCase.swift */; };
 		C4C82117267FA3D700B331EE /* Ad+Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C82116267FA3D700B331EE /* Ad+Dummy.swift */; };
 		C4C8211F267FA44E00B331EE /* Ad.json in Resources */ = {isa = PBXBuildFile; fileRef = C4C8211E267FA44E00B331EE /* Ad.json */; };
 		C4C82125267FA4D400B331EE /* JSONParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C82124267FA4D400B331EE /* JSONParseHelper.swift */; };
 		C4C8213A267FA6DD00B331EE /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = C4C82139267FA6DD00B331EE /* SnapshotTesting */; };
+		C4C82165267FD76F00B331EE /* AdsListViewControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C82164267FD76E00B331EE /* AdsListViewControllerTestCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,10 +76,10 @@
 		C4C820F6267FA07200B331EE /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		C4C820F8267FA07200B331EE /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
 		C4C820F9267FA07200B331EE /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
-		C4C82108267FA24A00B331EE /* AdsListViewControllerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsListViewControllerTestCase.swift; sourceTree = "<group>"; };
 		C4C82116267FA3D700B331EE /* Ad+Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ad+Dummy.swift"; sourceTree = "<group>"; };
 		C4C8211E267FA44E00B331EE /* Ad.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Ad.json; sourceTree = "<group>"; };
 		C4C82124267FA4D400B331EE /* JSONParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParseHelper.swift; sourceTree = "<group>"; };
+		C4C82164267FD76E00B331EE /* AdsListViewControllerTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsListViewControllerTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,7 +217,7 @@
 		C4C82114267FA3BB00B331EE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C4C82108267FA24A00B331EE /* AdsListViewControllerTestCase.swift */,
+				C4C82164267FD76E00B331EE /* AdsListViewControllerTestCase.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -401,7 +401,7 @@
 			files = (
 				6C58CC982625FF0D001F7524 /* desafioTests.swift in Sources */,
 				C4C82125267FA4D400B331EE /* JSONParseHelper.swift in Sources */,
-				C4C82109267FA24A00B331EE /* AdsListViewControllerTestCase.swift in Sources */,
+				C4C82165267FD76F00B331EE /* AdsListViewControllerTestCase.swift in Sources */,
 				C4C82117267FA3D700B331EE /* Ad+Dummy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

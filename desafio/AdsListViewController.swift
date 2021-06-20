@@ -23,6 +23,9 @@ class AdsListViewController: UIViewController {
         collectionView.backgroundColor = .lightGray
         collectionView.clipsToBounds = true
         collectionView.isOpaque = true
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(AdListCardViewCell.self)
         return collectionView
     }()
 
@@ -37,7 +40,6 @@ class AdsListViewController: UIViewController {
 
     init() {
         super.init(nibName: nil, bundle: nil)
-        setupUI()
     }
 
     required init?(coder: NSCoder) {
@@ -88,17 +90,5 @@ extension AdsListViewController: UICollectionViewDelegate, UICollectionViewDataS
         }
         cell.configure(ad: ads[indexPath.row])
         return cell
-    }
-}
-
-// MARK: Setup
-
-extension AdsListViewController {
-    
-    private func setupUI() {
-        adsCollectionView.delegate = self
-        adsCollectionView.dataSource = self
-//        adsCollectionView.collectionViewLayout = flowLayout
-        adsCollectionView.register(AdListCardViewCell.self)
     }
 }

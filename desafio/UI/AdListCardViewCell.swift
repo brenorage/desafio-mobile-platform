@@ -20,7 +20,7 @@ class AdListCardViewCell: UICollectionViewCell, Reusable {
     @IBOutlet weak var adImageContainer: UIView!
     @IBOutlet weak var featuredBadge: UIView!
     @IBOutlet weak var featuredLine: UIView!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         setupBorder()

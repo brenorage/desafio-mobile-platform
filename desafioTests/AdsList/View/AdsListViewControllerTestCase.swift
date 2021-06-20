@@ -8,16 +8,15 @@ class AdsListViewControllerTestCase: XCTestCase {
     var sut: AdsListViewController!
 
     override func setUp() {
-        isRecording = true
         sut = AdsListViewController()
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sut = nil
     }
 
     func testAdsListViewControllerWhenInvocatedShouldHaveCorrectLayout() throws {
-        sut.ads = [Ad.dummy()]
+        sut.ads = [Ad.dummy(), Ad.dummy(), Ad.dummy(), Ad.dummy()]
         assertSnapshot(matching: sut, as: .image)
     }
 }
