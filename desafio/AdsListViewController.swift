@@ -7,28 +7,43 @@
 
 import UIKit
 
-class AdsListViewController: UIViewController, NibLoadble {
+class AdsListViewController: UIViewController {
 
     // Mark: properties
 
     var ads: [Ad] = []
-    lazy private var flowLayout: AdListViewLayout = {
-        let layout = AdListViewLayout()
-        return layout
-    }()
+
     let session = URLSession.shared
     let url = URL(string: "https://nga.olx.com.br/api/v1.2/public/ads?lim=25&region=11&sort=relevance&state=1&lang=pt")!
 
-    // Mark: outlets
+    private let flowLayout = AdListViewLayout()
 
-    @IBOutlet weak var adsCollectionView: UICollectionView!
+    private lazy var adsCollectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+        collectionView.backgroundColor = .lightGray
+        collectionView.clipsToBounds = true
+        collectionView.isOpaque = true
+        return collectionView
+    }()
+
+    override func loadView() {
+        view = adsCollectionView
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
         getAds()
     }
-    
+
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        setupUI()
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     // Mark: REST
     
     private func getAds() {
@@ -66,7 +81,7 @@ extension AdsListViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard
-            let cell: AdListCardViewCell = adsCollectionView.dequeueReusableCell(indexPath: indexPath),
+            let cell: AdListCardViewCell = collectionView.dequeueReusableCell(indexPath: indexPath),
             !ads.isEmpty
         else {
             return UICollectionViewCell()
@@ -83,7 +98,7 @@ extension AdsListViewController {
     private func setupUI() {
         adsCollectionView.delegate = self
         adsCollectionView.dataSource = self
-        adsCollectionView.collectionViewLayout = flowLayout
+//        adsCollectionView.collectionViewLayout = flowLayout
         adsCollectionView.register(AdListCardViewCell.self)
     }
 }
