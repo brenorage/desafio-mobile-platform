@@ -1,0 +1,45 @@
+<UICollectionView; frame = (0 0; 414 896); clipsToBounds = YES; autoresize = W+H; gestureRecognizers = <NSArray>; layer = <CALayer>; contentOffset: {0, -48}; contentSize: {414, 562}; adjustedContentInset: {48, 0, 0, 0}; layout: <desafio.AdListViewLayout>; dataSource: <desafio.AdsListViewController>>
+   | <desafio.AdListCardViewCell; baseClass = UICollectionViewCell; frame = (10 10; 394 128); clipsToBounds = YES; opaque = NO; layer = <CALayer>>
+   |    | <UIView; frame = (0 0; 394 128); autoresize = RM+BM; layer = <CALayer>>
+   |    |    | <UILabel; frame = (144 14; 234 17.5); text = 'TV retrô softselector    ...'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    | <UILabel; frame = (144 67.5; 234 21); text = 'R$110'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    | <UILabel; frame = (144 104; 234 14); text = 'Morada das Vinhas - 20/06...'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    | <UIView; frame = (0 0; 128 128); clipsToBounds = YES; autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    | <UIImageView; frame = (0 0; 128 128); clipsToBounds = YES; autoresize = RM+BM; userInteractionEnabled = NO; layer = <CALayer>>
+   |    |    |    | <UIView; frame = (0 0; 7 128); hidden = YES; autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    | <UIView; frame = (53 113; 77 30); hidden = YES; autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    |    | <UILabel; frame = (4.5 1.5; 65.5 14); text = 'DESTAQUE'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   | <desafio.AdListCardViewCell; baseClass = UICollectionViewCell; frame = (10 148; 394 128); clipsToBounds = YES; opaque = NO; layer = <CALayer>>
+   |    | <UIView; frame = (0 0; 394 128); autoresize = RM+BM; layer = <CALayer>>
+   |    |    | <UILabel; frame = (144 14; 234 17.5); text = 'TV retrô softselector    ...'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    | <UILabel; frame = (144 67.5; 234 21); text = 'R$110'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    | <UILabel; frame = (144 104; 234 14); text = 'Morada das Vinhas - 20/06...'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    | <UIView; frame = (0 0; 128 128); clipsToBounds = YES; autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    | <UIImageView; frame = (0 0; 128 128); clipsToBounds = YES; autoresize = RM+BM; userInteractionEnabled = NO; layer = <CALayer>>
+   |    |    |    | <UIView; frame = (0 0; 7 128); hidden = YES; autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    | <UIView; frame = (53 113; 77 30); hidden = YES; autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    |    | <UILabel; frame = (4.5 1.5; 65.5 14); text = 'DESTAQUE'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   | <desafio.AdListCardViewCell; baseClass = UICollectionViewCell; frame = (10 286; 394 128); clipsToBounds = YES; opaque = NO; layer = <CALayer>>
+   |    | <UIView; frame = (0 0; 394 128); autoresize = RM+BM; layer = <CALayer>>
+   |    |    | <UILabel; frame = (144 14; 234 17.5); text = 'TV retrô softselector    ...'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    | <UILabel; frame = (144 67.5; 234 21); text = 'R$110'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    | <UILabel; frame = (144 104; 234 14); text = 'Morada das Vinhas - 20/06...'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    | <UIView; frame = (0 0; 128 128); clipsToBounds = YES; autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    | <UIImageView; frame = (0 0; 128 128); clipsToBounds = YES; autoresize = RM+BM; userInteractionEnabled = NO; layer = <CALayer>>
+   |    |    |    | <UIView; frame = (0 0; 7 128); hidden = YES; autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    | <UIView; frame = (53 113; 77 30); hidden = YES; autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    |    | <UILabel; frame = (4.5 1.5; 65.5 14); text = 'DESTAQUE'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   | <desafio.AdListCardViewCell; baseClass = UICollectionViewCell; frame = (10 424; 394 128); clipsToBounds = YES; opaque = NO; layer = <CALayer>>
+   |    | <UIView; frame = (0 0; 394 128); autoresize = RM+BM; layer = <CALayer>>
+   |    |    | <UILabel; frame = (144 14; 234 17.5); text = 'TV retrô softselector    ...'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    | <UILabel; frame = (144 67.5; 234 21); text = 'R$110'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    | <UILabel; frame = (144 104; 234 14); text = 'Morada das Vinhas - 20/06...'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    | <UIView; frame = (0 0; 128 128); clipsToBounds = YES; autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    | <UIImageView; frame = (0 0; 128 128); clipsToBounds = YES; autoresize = RM+BM; userInteractionEnabled = NO; layer = <CALayer>>
+   |    |    |    | <UIView; frame = (0 0; 7 128); hidden = YES; autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    | <UIView; frame = (53 113; 77 30); hidden = YES; autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    |    | <UILabel; frame = (4.5 1.5; 65.5 14); text = 'DESTAQUE'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   | <_UIScrollViewScrollIndicator; frame = (408 -87; 3 36); alpha = 0; autoresize = LM; layer = <CALayer>>
+   |    | <UIView; frame = (0 0; 3 36); layer = <CALayer>>
+   | <_UIScrollViewScrollIndicator; frame = (-42 842; 36 3); alpha = 0; autoresize = TM; layer = <CALayer>>
+   |    | <UIView; frame = (0 0; 36 3); layer = <CALayer>>
