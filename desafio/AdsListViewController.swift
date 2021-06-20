@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AdsListViewController: UIViewController {
+class AdsListViewController: UIViewController, NibLoadble {
 
     // Mark: properties
 
@@ -65,7 +65,10 @@ extension AdsListViewController: UICollectionViewDelegate, UICollectionViewDataS
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let cell = adsCollectionView.dequeueReusableCell(withReuseIdentifier: "AdListCardViewCellIdentifier", for: indexPath) as? AdListCardViewCell, !ads.isEmpty else {
+        guard
+            let cell: AdListCardViewCell = adsCollectionView.dequeueReusableCell(indexPath: indexPath),
+            !ads.isEmpty
+        else {
             return UICollectionViewCell()
         }
         cell.configure(ad: ads[indexPath.row])
@@ -78,9 +81,9 @@ extension AdsListViewController: UICollectionViewDelegate, UICollectionViewDataS
 extension AdsListViewController {
     
     private func setupUI() {
-            adsCollectionView.delegate = self
-            adsCollectionView.dataSource = self
-            adsCollectionView.collectionViewLayout = flowLayout
-            adsCollectionView.register(UINib(nibName: "AdListCardViewCell", bundle: nil), forCellWithReuseIdentifier: "AdListCardViewCellIdentifier")
+        adsCollectionView.delegate = self
+        adsCollectionView.dataSource = self
+        adsCollectionView.collectionViewLayout = flowLayout
+        adsCollectionView.register(AdListCardViewCell.self)
     }
 }

@@ -7,10 +7,10 @@
 
 import UIKit
 
-class AdListCardViewCell: UICollectionViewCell {
-    
-    static var nibName = "AdListCardViewCell"
-    static var reuseIdentifier = "AdListCardViewCellIdentifier"
+class AdListCardViewCell: UICollectionViewCell, Reusable {
+//
+//    static var nibName = "AdListCardViewCell"
+//    static var reuseIdentifier = "AdListCardViewCellIdentifier"
 
     //MARK: - IBOutlets
     @IBOutlet weak var titleLabel: UILabel!
