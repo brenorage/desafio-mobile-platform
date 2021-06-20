@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,13 +16,21 @@
 		6C4BF0252628BE5000B6752C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4BF0242628BE5000B6752C /* UIColor+Extension.swift */; };
 		6C58CC812625FF09001F7524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C58CC802625FF09001F7524 /* AppDelegate.swift */; };
 		6C58CC832625FF09001F7524 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C58CC822625FF09001F7524 /* SceneDelegate.swift */; };
-		6C58CC882625FF09001F7524 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C58CC862625FF09001F7524 /* Main.storyboard */; };
 		6C58CC8A2625FF0C001F7524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C58CC892625FF0C001F7524 /* Assets.xcassets */; };
 		6C58CC8D2625FF0C001F7524 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C58CC8B2625FF0C001F7524 /* LaunchScreen.storyboard */; };
 		6C58CC982625FF0D001F7524 /* desafioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C58CC972625FF0D001F7524 /* desafioTests.swift */; };
 		6C58CCA32625FF0D001F7524 /* desafioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C58CCA22625FF0D001F7524 /* desafioUITests.swift */; };
 		6C58CCBD26260262001F7524 /* AdListViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C58CCBC26260262001F7524 /* AdListViewLayout.swift */; };
 		6C58CCD226261245001F7524 /* Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C58CCD126261245001F7524 /* Ad.swift */; };
+		C4C820FC267FA07200B331EE /* UINib+Instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C820F5267FA07200B331EE /* UINib+Instantiate.swift */; };
+		C4C820FD267FA07200B331EE /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C820F6267FA07200B331EE /* NibLoadable.swift */; };
+		C4C820FE267FA07200B331EE /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C820F8267FA07200B331EE /* UICollectionView+Reusable.swift */; };
+		C4C820FF267FA07200B331EE /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C820F9267FA07200B331EE /* Reusable.swift */; };
+		C4C82117267FA3D700B331EE /* Ad+Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C82116267FA3D700B331EE /* Ad+Dummy.swift */; };
+		C4C8211F267FA44E00B331EE /* Ad.json in Resources */ = {isa = PBXBuildFile; fileRef = C4C8211E267FA44E00B331EE /* Ad.json */; };
+		C4C82125267FA4D400B331EE /* JSONParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C82124267FA4D400B331EE /* JSONParseHelper.swift */; };
+		C4C8213A267FA6DD00B331EE /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = C4C82139267FA6DD00B331EE /* SnapshotTesting */; };
+		C4C82165267FD76F00B331EE /* AdsListViewControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C82164267FD76E00B331EE /* AdsListViewControllerTestCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +61,6 @@
 		6C58CC7D2625FF09001F7524 /* desafio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = desafio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C58CC802625FF09001F7524 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C58CC822625FF09001F7524 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6C58CC872625FF09001F7524 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C58CC892625FF0C001F7524 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C58CC8C2625FF0C001F7524 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C58CC8E2625FF0C001F7524 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,6 +72,14 @@
 		6C58CCA42625FF0D001F7524 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C58CCBC26260262001F7524 /* AdListViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdListViewLayout.swift; sourceTree = "<group>"; };
 		6C58CCD126261245001F7524 /* Ad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ad.swift; sourceTree = "<group>"; };
+		C4C820F5267FA07200B331EE /* UINib+Instantiate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINib+Instantiate.swift"; sourceTree = "<group>"; };
+		C4C820F6267FA07200B331EE /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		C4C820F8267FA07200B331EE /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
+		C4C820F9267FA07200B331EE /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		C4C82116267FA3D700B331EE /* Ad+Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ad+Dummy.swift"; sourceTree = "<group>"; };
+		C4C8211E267FA44E00B331EE /* Ad.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Ad.json; sourceTree = "<group>"; };
+		C4C82124267FA4D400B331EE /* JSONParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParseHelper.swift; sourceTree = "<group>"; };
+		C4C82164267FD76E00B331EE /* AdsListViewControllerTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsListViewControllerTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4C8213A267FA6DD00B331EE /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,10 +131,10 @@
 		6C58CC7F2625FF09001F7524 /* desafio */ = {
 			isa = PBXGroup;
 			children = (
+				C4C820F3267FA06800B331EE /* Common */,
 				6C58CCB62625FFB4001F7524 /* UI */,
 				6C58CC802625FF09001F7524 /* AppDelegate.swift */,
 				6C58CC822625FF09001F7524 /* SceneDelegate.swift */,
-				6C58CC862625FF09001F7524 /* Main.storyboard */,
 				6C58CC892625FF0C001F7524 /* Assets.xcassets */,
 				6C58CC8B2625FF0C001F7524 /* LaunchScreen.storyboard */,
 				6C58CC8E2625FF0C001F7524 /* Info.plist */,
@@ -131,6 +147,9 @@
 		6C58CC962625FF0D001F7524 /* desafioTests */ = {
 			isa = PBXGroup;
 			children = (
+				C4C82123267FA47700B331EE /* Helpers */,
+				C4C82115267FA3C400B331EE /* Doubles */,
+				C4C82113267FA3B300B331EE /* AdsList */,
 				6C58CC972625FF0D001F7524 /* desafioTests.swift */,
 				6C58CC992625FF0D001F7524 /* Info.plist */,
 			);
@@ -160,6 +179,66 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		C4C820F3267FA06800B331EE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C4C820F4267FA07200B331EE /* Nib */,
+				C4C820F7267FA07200B331EE /* Reusable */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		C4C820F4267FA07200B331EE /* Nib */ = {
+			isa = PBXGroup;
+			children = (
+				C4C820F5267FA07200B331EE /* UINib+Instantiate.swift */,
+				C4C820F6267FA07200B331EE /* NibLoadable.swift */,
+			);
+			path = Nib;
+			sourceTree = "<group>";
+		};
+		C4C820F7267FA07200B331EE /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				C4C820F9267FA07200B331EE /* Reusable.swift */,
+				C4C820F8267FA07200B331EE /* UICollectionView+Reusable.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
+		C4C82113267FA3B300B331EE /* AdsList */ = {
+			isa = PBXGroup;
+			children = (
+				C4C82114267FA3BB00B331EE /* View */,
+			);
+			path = AdsList;
+			sourceTree = "<group>";
+		};
+		C4C82114267FA3BB00B331EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C4C82164267FD76E00B331EE /* AdsListViewControllerTestCase.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C4C82115267FA3C400B331EE /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				C4C82116267FA3D700B331EE /* Ad+Dummy.swift */,
+				C4C8211E267FA44E00B331EE /* Ad.json */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
+		C4C82123267FA47700B331EE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C4C82124267FA4D400B331EE /* JSONParseHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -176,6 +255,8 @@
 			dependencies = (
 			);
 			name = desafio;
+			packageProductDependencies = (
+			);
 			productName = desafio;
 			productReference = 6C58CC7D2625FF09001F7524 /* desafio.app */;
 			productType = "com.apple.product-type.application";
@@ -194,6 +275,9 @@
 				6C58CC952625FF0D001F7524 /* PBXTargetDependency */,
 			);
 			name = desafioTests;
+			packageProductDependencies = (
+				C4C82139267FA6DD00B331EE /* SnapshotTesting */,
+			);
 			productName = desafioTests;
 			productReference = 6C58CC932625FF0D001F7524 /* desafioTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -247,6 +331,9 @@
 				Base,
 			);
 			mainGroup = 6C58CC742625FF09001F7524;
+			packageReferences = (
+				C4C82138267FA6DD00B331EE /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			productRefGroup = 6C58CC7E2625FF09001F7524 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -266,7 +353,6 @@
 				6C58CC8D2625FF0C001F7524 /* LaunchScreen.storyboard in Resources */,
 				6C4BF01D2628BBAB00B6752C /* AdListCardViewCell.xib in Resources */,
 				6C58CC8A2625FF0C001F7524 /* Assets.xcassets in Resources */,
-				6C58CC882625FF09001F7524 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +360,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4C8211F267FA44E00B331EE /* Ad.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,14 +378,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4C820FE267FA07200B331EE /* UICollectionView+Reusable.swift in Sources */,
 				6C19D334262F127B00068196 /* UIImageView+Extension.swift in Sources */,
+				C4C820FC267FA07200B331EE /* UINib+Instantiate.swift in Sources */,
 				6C4BF0252628BE5000B6752C /* UIColor+Extension.swift in Sources */,
 				6C4BF0132628B98300B6752C /* AdListCardViewCell.swift in Sources */,
 				6C58CC812625FF09001F7524 /* AppDelegate.swift in Sources */,
+				C4C820FF267FA07200B331EE /* Reusable.swift in Sources */,
 				6C4BF0182628BA3600B6752C /* UIView+Extension.swift in Sources */,
 				6C2582C82626305600E30FDB /* AdsListViewController.swift in Sources */,
 				6C58CCD226261245001F7524 /* Ad.swift in Sources */,
 				6C58CC832625FF09001F7524 /* SceneDelegate.swift in Sources */,
+				C4C820FD267FA07200B331EE /* NibLoadable.swift in Sources */,
 				6C58CCBD26260262001F7524 /* AdListViewLayout.swift in Sources */,
 				6C4BF00E26277F8900B6752C /* InsetLabel.swift in Sources */,
 			);
@@ -309,6 +400,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C58CC982625FF0D001F7524 /* desafioTests.swift in Sources */,
+				C4C82125267FA4D400B331EE /* JSONParseHelper.swift in Sources */,
+				C4C82165267FD76F00B331EE /* AdsListViewControllerTestCase.swift in Sources */,
+				C4C82117267FA3D700B331EE /* Ad+Dummy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,14 +430,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6C58CC862625FF09001F7524 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6C58CC872625FF09001F7524 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6C58CC8B2625FF0C001F7524 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -633,6 +719,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C4C82138267FA6DD00B331EE /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C4C82139267FA6DD00B331EE /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4C82138267FA6DD00B331EE /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6C58CC752625FF09001F7524 /* Project object */;
 }

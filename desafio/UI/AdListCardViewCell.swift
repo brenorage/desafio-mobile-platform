@@ -7,10 +7,10 @@
 
 import UIKit
 
-class AdListCardViewCell: UICollectionViewCell {
-    
-    static var nibName = "AdListCardViewCell"
-    static var reuseIdentifier = "AdListCardViewCellIdentifier"
+class AdListCardViewCell: UICollectionViewCell, Reusable {
+//
+//    static var nibName = "AdListCardViewCell"
+//    static var reuseIdentifier = "AdListCardViewCellIdentifier"
 
     //MARK: - IBOutlets
     @IBOutlet weak var titleLabel: UILabel!
@@ -20,7 +20,7 @@ class AdListCardViewCell: UICollectionViewCell {
     @IBOutlet weak var adImageContainer: UIView!
     @IBOutlet weak var featuredBadge: UIView!
     @IBOutlet weak var featuredLine: UIView!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         setupBorder()
