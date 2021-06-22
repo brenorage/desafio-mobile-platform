@@ -20,7 +20,7 @@ class AdsListViewControllerTestCase: XCTestCase {
     }
 
     func testAdsListViewControllerWhenInvocatedShouldHaveCorrectLayout() throws {
-        assertSnapshot(matching: sut, as: .image)
+        assertSnapshot(matching: sut, as: .recursiveDescription)
     }
 
     func testAdsListViewControllerWhenLoadedShouldCallGetAdsList() {
