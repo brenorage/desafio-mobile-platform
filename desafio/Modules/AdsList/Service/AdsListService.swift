@@ -14,6 +14,14 @@ final class AdsListService: AdsListServiceProtocol {
 
     func getAdsList(completion: @escaping RequestCallback<[Ad]>) {
         let endpoint = AdsListEndpoint()
-        httpServices.request(endpoint: endpoint, completion: completion)
+        httpServices.request(endpoint: endpoint) { (result: Result<ListAds, NetworkError>) in
+            switch result {
+            case let .success(listAds):
+                guard let ads = listAds.list_ads else { return completion(.success([])) }
+                completion(.success(ads))
+            case let .failure(error):
+                completion(.failure(error))
+            }
+        }
     }
 }

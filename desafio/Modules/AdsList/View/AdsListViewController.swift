@@ -7,16 +7,12 @@
 
 import UIKit
 
+protocol AdsListViewProtocol: class {
+    func reloadData()
+    func showError(with message: String)
+}
+
 class AdsListViewController: UIViewController {
-
-    // Mark: properties
-
-    var ads: [Ad] = []
-
-    let session = URLSession.shared
-    let url = URL(string: "https://nga.olx.com.br/api/v1.2/public/ads?lim=25&region=11&sort=relevance&state=1&lang=pt")!
-
-    private let flowLayout = AdListViewLayout()
 
     private lazy var adsCollectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
@@ -29,66 +25,56 @@ class AdsListViewController: UIViewController {
         return collectionView
     }()
 
+    private let flowLayout = AdListCollectionViewLayout()
+    private let presenter: AdsListPresenterProtocol
+
     override func loadView() {
         view = adsCollectionView
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getAds()
+        presenter.getAdsList()
     }
 
-    init() {
+    init(presenter: AdsListPresenterProtocol) {
+        self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
 
-    // Mark: REST
-    
-    private func getAds() {
-        let task = session.dataTask(with: url, completionHandler: { data, response, error in
-            // Check the response
-            print(response)
-            if error != nil {
-                print(error)
-                return
-            }
-            // Serialize the data into an object
-            do {
-                let json = try JSONDecoder().decode(ListAds.self, from: data! )
-                print(json)
-                self.ads = json.list_ads ?? []
-                DispatchQueue.main.async {
-                    self.adsCollectionView.reloadData()
-                }
-            } catch {
-                print("Error during JSON serialization: \(error.localizedDescription)")
-            }
-        })
-        task.resume()
+extension AdsListViewController: AdsListViewProtocol {
+    func reloadData() {
+        DispatchQueue.main.async {
+            self.adsCollectionView.reloadData()
+        }
     }
 
+    func showError(with message: String) {
+        print(message)
+    }
 }
 
 // MARK: UICollectionViewDataSource
 
 extension AdsListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return ads.count
+        return presenter.ads.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard
             let cell: AdListCardViewCell = collectionView.dequeueReusableCell(indexPath: indexPath),
-            !ads.isEmpty
+            let ad = presenter.ads[safe: indexPath.item]
         else {
             return UICollectionViewCell()
         }
-        cell.configure(ad: ads[indexPath.row])
+        cell.configure(ad: ad)
         return cell
     }
 }

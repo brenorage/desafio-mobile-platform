@@ -20,12 +20,12 @@ class AdsListServiceTestCase: XCTestCase {
     func testGetAdsListWhenWasCalledShouldCallCorrectEndpoint() {
         sut.getAdsList { _ in }
 
-        XCTAssertEqual(httpServicesStub.calledEndpoint?.path, "ads")
+        XCTAssertEqual(httpServicesStub.calledEndpoint?.url?.absoluteString, "https://nga.olx.com.br/api/v1.2/public/ads?lim=25&region=11&sort=relevance&state=1&lang=pt")
     }
 
 
     func testGetAdsListWhenResultWasSuccessShouldReturnAdsList() {
-        httpServicesStub.successDecodable = [Ad.dummy()]
+        httpServicesStub.successDecodable = ListAds(list_ads: [Ad.dummy()])
         var adSubject = ""
 
         let getAdsListExpectation = expectation(description: "Callback getAdsList")
@@ -41,6 +41,26 @@ class AdsListServiceTestCase: XCTestCase {
 
         wait(for: [getAdsListExpectation], timeout: 0.3)
         XCTAssertEqual(adSubject, "TV retrô softselector      110.00")
+    }
+
+    func testGetAdsListWhenResultWasSuccessWithNilListShouldReturnBadFormat() {
+        let listAds = ListAds(list_ads: nil)
+        httpServicesStub.successDecodable = listAds
+        var emptyArray: [Ad] = []
+
+        let getAdsListExpectation = expectation(description: "Callback getAdsList")
+        sut.getAdsList { result in
+            switch result {
+            case let .success(ads):
+                emptyArray = ads
+            case .failure:
+                XCTFail("It was expected a success")
+            }
+            getAdsListExpectation.fulfill()
+        }
+
+        wait(for: [getAdsListExpectation], timeout: 0.3)
+        XCTAssertEqual(emptyArray.count, 0)
     }
 
     func testGetAdsListWhenResultWasFailureShouldReturnError() {

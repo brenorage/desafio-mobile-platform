@@ -6,17 +6,25 @@ import SnapshotTesting
 class AdsListViewControllerTestCase: XCTestCase {
 
     var sut: AdsListViewController!
+    var presenterStub: AdsListPresenterStub!
 
     override func setUp() {
-        sut = AdsListViewController()
+        presenterStub = AdsListPresenterStub()
+        sut = AdsListViewController(presenter: presenterStub)
+        buildWindow(with: sut)
     }
 
     override func tearDown() {
         sut = nil
+        presenterStub = nil
     }
 
     func testAdsListViewControllerWhenInvocatedShouldHaveCorrectLayout() throws {
-        sut.ads = [Ad.dummy(), Ad.dummy(), Ad.dummy(), Ad.dummy()]
         assertSnapshot(matching: sut, as: .recursiveDescription)
+    }
+
+    func testAdsListViewControllerWhenLoadedShouldCallGetAdsList() {
+        sut.viewDidLoad()
+        XCTAssertTrue(presenterStub.getAdsListWasCalled)
     }
 }
