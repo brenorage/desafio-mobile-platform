@@ -25,7 +25,7 @@ class AdsListServiceTestCase: XCTestCase {
 
 
     func testGetAdsListWhenResultWasSuccessShouldReturnAdsList() {
-        httpServicesStub.successDecodable = [Ad.dummy()]
+        httpServicesStub.successDecodable = ListAds(list_ads: [Ad.dummy()])
         var adSubject = ""
 
         let getAdsListExpectation = expectation(description: "Callback getAdsList")
@@ -44,7 +44,7 @@ class AdsListServiceTestCase: XCTestCase {
     }
 
     func testGetAdsListWhenResultWasSuccessWithNilListShouldReturnBadFormat() {
-        var listAds = ListAds(list_ads: nil)
+        let listAds = ListAds(list_ads: nil)
         httpServicesStub.successDecodable = listAds
         var emptyArray: [Ad] = []
 
