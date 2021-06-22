@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		6C19D334262F127B00068196 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C19D333262F127B00068196 /* UIImageView+Extension.swift */; };
 		6C2582C82626305600E30FDB /* AdsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2582C72626305600E30FDB /* AdsListViewController.swift */; };
-		6C4BF00E26277F8900B6752C /* InsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4BF00D26277F8900B6752C /* InsetLabel.swift */; };
 		6C4BF0132628B98300B6752C /* AdListCardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4BF0122628B98300B6752C /* AdListCardViewCell.swift */; };
 		6C4BF0182628BA3600B6752C /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4BF0172628BA3600B6752C /* UIView+Extension.swift */; };
 		6C4BF01D2628BBAB00B6752C /* AdListCardViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C4BF01C2628BBAB00B6752C /* AdListCardViewCell.xib */; };
@@ -22,6 +21,8 @@
 		6C58CCA32625FF0D001F7524 /* desafioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C58CCA22625FF0D001F7524 /* desafioUITests.swift */; };
 		6C58CCBD26260262001F7524 /* AdListViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C58CCBC26260262001F7524 /* AdListViewLayout.swift */; };
 		6C58CCD226261245001F7524 /* Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C58CCD126261245001F7524 /* Ad.swift */; };
+		C4C3EDE5268272790062C08C /* AdsListServiceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C3EDE4268272790062C08C /* AdsListServiceTestCase.swift */; };
+		C4C3EDEE2682732E0062C08C /* HttpServicesStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C3EDED2682732E0062C08C /* HttpServicesStub.swift */; };
 		C4C820FC267FA07200B331EE /* UINib+Instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C820F5267FA07200B331EE /* UINib+Instantiate.swift */; };
 		C4C820FD267FA07200B331EE /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C820F6267FA07200B331EE /* NibLoadable.swift */; };
 		C4C820FE267FA07200B331EE /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C820F8267FA07200B331EE /* UICollectionView+Reusable.swift */; };
@@ -40,6 +41,8 @@
 		C4C82192267FE55A00B331EE /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C8218E267FE55A00B331EE /* File.swift */; };
 		C4C82193267FE55A00B331EE /* EndpointMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C8218F267FE55A00B331EE /* EndpointMock.swift */; };
 		C4C82194267FE55A00B331EE /* HttpServicesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C82190267FE55A00B331EE /* HttpServicesTest.swift */; };
+		C4F914FA2682308D00532AA7 /* AdsListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F914F92682308D00532AA7 /* AdsListService.swift */; };
+		C4F915002682320900532AA7 /* AdsListEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F914FF2682320900532AA7 /* AdsListEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +65,6 @@
 /* Begin PBXFileReference section */
 		6C19D333262F127B00068196 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		6C2582C72626305600E30FDB /* AdsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsListViewController.swift; sourceTree = "<group>"; };
-		6C4BF00D26277F8900B6752C /* InsetLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetLabel.swift; sourceTree = "<group>"; };
 		6C4BF0122628B98300B6752C /* AdListCardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdListCardViewCell.swift; sourceTree = "<group>"; };
 		6C4BF0172628BA3600B6752C /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		6C4BF01C2628BBAB00B6752C /* AdListCardViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdListCardViewCell.xib; sourceTree = "<group>"; };
@@ -81,6 +83,8 @@
 		6C58CCA42625FF0D001F7524 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C58CCBC26260262001F7524 /* AdListViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdListViewLayout.swift; sourceTree = "<group>"; };
 		6C58CCD126261245001F7524 /* Ad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ad.swift; sourceTree = "<group>"; };
+		C4C3EDE4268272790062C08C /* AdsListServiceTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsListServiceTestCase.swift; sourceTree = "<group>"; };
+		C4C3EDED2682732E0062C08C /* HttpServicesStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpServicesStub.swift; sourceTree = "<group>"; };
 		C4C820F5267FA07200B331EE /* UINib+Instantiate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINib+Instantiate.swift"; sourceTree = "<group>"; };
 		C4C820F6267FA07200B331EE /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		C4C820F8267FA07200B331EE /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 		C4C8218E267FE55A00B331EE /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		C4C8218F267FE55A00B331EE /* EndpointMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointMock.swift; sourceTree = "<group>"; };
 		C4C82190267FE55A00B331EE /* HttpServicesTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpServicesTest.swift; sourceTree = "<group>"; };
+		C4F914F92682308D00532AA7 /* AdsListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsListService.swift; sourceTree = "<group>"; };
+		C4F914FF2682320900532AA7 /* AdsListEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsListEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,16 +155,13 @@
 		6C58CC7F2625FF09001F7524 /* desafio */ = {
 			isa = PBXGroup;
 			children = (
+				C4C821AA267FE83300B331EE /* Resources */,
 				C4C82175267FD8F400B331EE /* Network */,
 				C4C820F3267FA06800B331EE /* Common */,
-				6C58CCB62625FFB4001F7524 /* UI */,
+				C4C821A1267FE79C00B331EE /* Modules */,
 				6C58CC802625FF09001F7524 /* AppDelegate.swift */,
 				6C58CC822625FF09001F7524 /* SceneDelegate.swift */,
-				6C58CC892625FF0C001F7524 /* Assets.xcassets */,
-				6C58CC8B2625FF0C001F7524 /* LaunchScreen.storyboard */,
 				6C58CC8E2625FF0C001F7524 /* Info.plist */,
-				6C58CCD126261245001F7524 /* Ad.swift */,
-				6C2582C72626305600E30FDB /* AdsListViewController.swift */,
 			);
 			path = desafio;
 			sourceTree = "<group>";
@@ -185,23 +188,26 @@
 			path = desafioUITests;
 			sourceTree = "<group>";
 		};
-		6C58CCB62625FFB4001F7524 /* UI */ = {
+		C4C3EDE32682725E0062C08C /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				6C4BF01C2628BBAB00B6752C /* AdListCardViewCell.xib */,
-				6C58CCBC26260262001F7524 /* AdListViewLayout.swift */,
-				6C4BF00D26277F8900B6752C /* InsetLabel.swift */,
-				6C4BF0122628B98300B6752C /* AdListCardViewCell.swift */,
-				6C4BF0172628BA3600B6752C /* UIView+Extension.swift */,
-				6C4BF0242628BE5000B6752C /* UIColor+Extension.swift */,
-				6C19D333262F127B00068196 /* UIImageView+Extension.swift */,
+				C4C3EDE4268272790062C08C /* AdsListServiceTestCase.swift */,
 			);
-			path = UI;
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C4C3EDEC2682731E0062C08C /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				C4C3EDED2682732E0062C08C /* HttpServicesStub.swift */,
+			);
+			path = Doubles;
 			sourceTree = "<group>";
 		};
 		C4C820F3267FA06800B331EE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C4C821A3267FE7BF00B331EE /* UIKitExtensions */,
 				C4C820F4267FA07200B331EE /* Nib */,
 				C4C820F7267FA07200B331EE /* Reusable */,
 			);
@@ -229,6 +235,8 @@
 		C4C82113267FA3B300B331EE /* AdsList */ = {
 			isa = PBXGroup;
 			children = (
+				C4C3EDEC2682731E0062C08C /* Doubles */,
+				C4C3EDE32682725E0062C08C /* Network */,
 				C4C82114267FA3BB00B331EE /* View */,
 			);
 			path = AdsList;
@@ -274,20 +282,93 @@
 		C4C8218B267FE55A00B331EE /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				C4C8218C267FE55A00B331EE /* Mock */,
+				C4C8218C267FE55A00B331EE /* Doubles */,
 				C4C82190267FE55A00B331EE /* HttpServicesTest.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
 		};
-		C4C8218C267FE55A00B331EE /* Mock */ = {
+		C4C8218C267FE55A00B331EE /* Doubles */ = {
 			isa = PBXGroup;
 			children = (
 				C4C8218D267FE55A00B331EE /* NetworkSessionMock.swift */,
 				C4C8218E267FE55A00B331EE /* File.swift */,
 				C4C8218F267FE55A00B331EE /* EndpointMock.swift */,
 			);
-			path = Mock;
+			path = Doubles;
+			sourceTree = "<group>";
+		};
+		C4C821A1267FE79C00B331EE /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C4C821A2267FE7A100B331EE /* AdsList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C4C821A2267FE7A100B331EE /* AdsList */ = {
+			isa = PBXGroup;
+			children = (
+				C4F914FE268230AA00532AA7 /* Service */,
+				C4C821A9267FE82300B331EE /* Model */,
+				C4C821A4267FE7D100B331EE /* View */,
+			);
+			path = AdsList;
+			sourceTree = "<group>";
+		};
+		C4C821A3267FE7BF00B331EE /* UIKitExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				6C4BF0172628BA3600B6752C /* UIView+Extension.swift */,
+				6C4BF0242628BE5000B6752C /* UIColor+Extension.swift */,
+				6C19D333262F127B00068196 /* UIImageView+Extension.swift */,
+			);
+			path = UIKitExtensions;
+			sourceTree = "<group>";
+		};
+		C4C821A4267FE7D100B331EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C4C821A5267FE7DC00B331EE /* Cell */,
+				6C58CCBC26260262001F7524 /* AdListViewLayout.swift */,
+				6C2582C72626305600E30FDB /* AdsListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C4C821A5267FE7DC00B331EE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6C4BF01C2628BBAB00B6752C /* AdListCardViewCell.xib */,
+				6C4BF0122628B98300B6752C /* AdListCardViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		C4C821A9267FE82300B331EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6C58CCD126261245001F7524 /* Ad.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C4C821AA267FE83300B331EE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6C58CC892625FF0C001F7524 /* Assets.xcassets */,
+				6C58CC8B2625FF0C001F7524 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C4F914FE268230AA00532AA7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C4F914F92682308D00532AA7 /* AdsListService.swift */,
+				C4F914FF2682320900532AA7 /* AdsListEndpoint.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,6 +514,7 @@
 				6C19D334262F127B00068196 /* UIImageView+Extension.swift in Sources */,
 				C4C820FC267FA07200B331EE /* UINib+Instantiate.swift in Sources */,
 				6C4BF0252628BE5000B6752C /* UIColor+Extension.swift in Sources */,
+				C4F914FA2682308D00532AA7 /* AdsListService.swift in Sources */,
 				6C4BF0132628B98300B6752C /* AdListCardViewCell.swift in Sources */,
 				6C58CC812625FF09001F7524 /* AppDelegate.swift in Sources */,
 				C4C820FF267FA07200B331EE /* Reusable.swift in Sources */,
@@ -445,7 +527,7 @@
 				C4C8217B267FD8F400B331EE /* EndpointProtocol.swift in Sources */,
 				C4C8217C267FD8F400B331EE /* NetworkSession.swift in Sources */,
 				6C58CCBD26260262001F7524 /* AdListViewLayout.swift in Sources */,
-				6C4BF00E26277F8900B6752C /* InsetLabel.swift in Sources */,
+				C4F915002682320900532AA7 /* AdsListEndpoint.swift in Sources */,
 				C4C8217E267FD8F400B331EE /* HTTPServices.swift in Sources */,
 				C4C8217F267FD8F400B331EE /* NetworkError.swift in Sources */,
 			);
@@ -458,6 +540,8 @@
 				6C58CC982625FF0D001F7524 /* desafioTests.swift in Sources */,
 				C4C82192267FE55A00B331EE /* File.swift in Sources */,
 				C4C82125267FA4D400B331EE /* JSONParseHelper.swift in Sources */,
+				C4C3EDEE2682732E0062C08C /* HttpServicesStub.swift in Sources */,
+				C4C3EDE5268272790062C08C /* AdsListServiceTestCase.swift in Sources */,
 				C4C82193267FE55A00B331EE /* EndpointMock.swift in Sources */,
 				C4C82191267FE55A00B331EE /* NetworkSessionMock.swift in Sources */,
 				C4C82194267FE55A00B331EE /* HttpServicesTest.swift in Sources */,
