@@ -10,11 +10,11 @@ struct AdsListEndpoint: EndpointProtocol {
     }
 
     var host: String {
-        "nga.olx.com.br/api/v1.2/public"
+        "nga.olx.com.br"
     }
 
     var path: String {
-        "ads"
+        "/api/v1.2/public/ads"
     }
 
     var parameters: [URLQueryItem] {
