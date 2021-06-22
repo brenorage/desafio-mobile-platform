@@ -49,7 +49,9 @@ class AdsListViewController: UIViewController {
 
 extension AdsListViewController: AdsListViewProtocol {
     func reloadData() {
-        adsCollectionView.reloadData()
+        DispatchQueue.main.async {
+            self.adsCollectionView.reloadData()
+        }
     }
 
     func showError(with message: String) {

@@ -43,6 +43,26 @@ class AdsListServiceTestCase: XCTestCase {
         XCTAssertEqual(adSubject, "TV retrô softselector      110.00")
     }
 
+    func testGetAdsListWhenResultWasSuccessWithNilListShouldReturnBadFormat() {
+        var listAds = ListAds(list_ads: nil)
+        httpServicesStub.successDecodable = listAds
+        var emptyArray: [Ad] = []
+
+        let getAdsListExpectation = expectation(description: "Callback getAdsList")
+        sut.getAdsList { result in
+            switch result {
+            case let .success(ads):
+                emptyArray = ads
+            case .failure:
+                XCTFail("It was expected a success")
+            }
+            getAdsListExpectation.fulfill()
+        }
+
+        wait(for: [getAdsListExpectation], timeout: 0.3)
+        XCTAssertEqual(emptyArray.count, 0)
+    }
+
     func testGetAdsListWhenResultWasFailureShouldReturnError() {
         httpServicesStub.error = NetworkError.internalError
         var receivedError = NetworkError.unknown
