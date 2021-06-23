@@ -274,7 +274,6 @@
 				C4C3EDEC2682731E0062C08C /* Doubles */,
 				C4C3EDE32682725E0062C08C /* Network */,
 				C4C3EE76268298280062C08C /* Presenter */,
-				C4ED24C02682CADE0063BF95 /* Model */,
 				C4C82114267FA3BB00B331EE /* View */,
 			);
 			path = AdsList;
@@ -401,13 +400,6 @@
 				6C58CC8B2625FF0C001F7524 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		C4ED24C02682CADE0063BF95 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		C4F914FE268230AA00532AA7 /* Service */ = {

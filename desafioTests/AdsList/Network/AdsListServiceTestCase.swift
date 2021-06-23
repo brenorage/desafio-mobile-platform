@@ -32,7 +32,7 @@ class AdsListServiceTestCase: XCTestCase {
         sut.getAdsList { result in
             switch result {
             case let .success(ads):
-                adSubject = ads.first?.ad.subject ?? "Assunto vazio"
+                adSubject = ads.first?.adDetail.subject ?? "Assunto vazio"
             case .failure:
                 XCTFail("It was expected a success")
             }
