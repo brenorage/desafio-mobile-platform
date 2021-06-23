@@ -12,7 +12,11 @@ struct ListAds: Decodable {
 }
 
 struct Ad: Decodable {
-    let ad: AdDetail
+    let adDetail: AdDetail
+
+    enum CodingKeys: String, CodingKey {
+        case adDetail = "ad"
+    }
 }
 
 struct AdDetail: Decodable {
@@ -21,6 +25,18 @@ struct AdDetail: Decodable {
     let prices: [AdPrice]?
     let locations: [AdLocation]
     let list_time: AdListTime
+
+    func getNeighbourhoodLocation(at locations: [AdLocation]) -> AdLocation? {
+        for loc in locations {
+            if loc.key == "neighbourhood" {
+                return loc
+            } else if let unwrapedLoc = loc.locations {
+                return getNeighbourhoodLocation(at: unwrapedLoc)
+            }
+        }
+
+        return nil
+    }
 }
 
 struct AdThumbnail: Decodable {
@@ -41,9 +57,21 @@ struct AdLocation: Decodable {
     let key: String?
     let label: String?
     let locations: [AdLocation]?
+
+    enum CodingKeys: String, CodingKey {
+        case code, key, label, locations
+    }
 }
 
 struct AdListTime: Decodable {
     let label: String
     let value: Int
+
+    var formattedTime: String {
+        let date = Date(timeIntervalSinceReferenceDate: TimeInterval(value))
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "pt-BR")
+        dateFormatter.dateFormat = "dd/MM 'às' HH:mm"
+        return dateFormatter.string(from: date)
+    }
 }
