@@ -74,7 +74,7 @@ extension AdsListViewController: UICollectionViewDelegate, UICollectionViewDataS
         else {
             return UICollectionViewCell()
         }
-        cell.configure(ad: ad)
+        cell.configure(with: ad.adDetail)
         return cell
     }
 }

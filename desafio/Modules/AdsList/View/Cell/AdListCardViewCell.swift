@@ -8,9 +8,6 @@
 import UIKit
 
 class AdListCardViewCell: UICollectionViewCell, Reusable {
-//
-//    static var nibName = "AdListCardViewCell"
-//    static var reuseIdentifier = "AdListCardViewCellIdentifier"
 
     //MARK: - IBOutlets
     @IBOutlet weak var titleLabel: UILabel!
@@ -23,43 +20,25 @@ class AdListCardViewCell: UICollectionViewCell, Reusable {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupBorder()
+        addRoundedCorners(withColor: UIColor.white, width: 0.0, radius: 5.0)
     }
     
     //MARK: - Public
-    func configure(ad: Ad) {
+    func configure(with adDetail: AdDetail) {
         featuredBadge.backgroundColor = UIColor(rgb: 0x6E0AD6)
         featuredLine.backgroundColor = UIColor(rgb: 0x6E0AD6)
         featuredBadge.isHidden = true
         featuredLine.isHidden = true
         
-        self.titleLabel.text = ad.ad.subject
-        self.priceLabel.text = ad.ad.prices?[0].label ?? ""
-        
-        let location = self.getLocation(ad.ad.locations[0])
+        titleLabel.text = adDetail.subject
+        priceLabel.text = adDetail.prices?.first?.label ?? ""
 
-        let date = Date(timeIntervalSinceReferenceDate: TimeInterval(ad.ad.list_time.value))
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "pt-BR")
-        dateFormatter.dateFormat = "dd/MM 'às' HH:mm"
-        timeLocationLabel.text = "\(location) - \(dateFormatter.string(from: date))"
-        guard let thumb = ad.ad.thumbnail else { return }
+        if let location = adDetail.getNeighbourhoodLocation(at: adDetail.locations) {
+            timeLocationLabel.text = "\(location.label ?? "") - \(adDetail.list_time.formattedTime)"
+        }
+
+        guard let thumb = adDetail.thumbnail else { return }
         let imageUrl = "\(String(describing: thumb.base_url))/images/\(String(describing: thumb.path))"
         self.adImageView.downloaded(from: imageUrl)
-    
-    }
-    
-    private func setupBorder() {
-        self.addRoundedCorners(withColor: UIColor.white, width: 0.0, radius: 5.0)
-    }
-    
-    private func getLocation(_ location: AdLocation) -> String {
-        if location.key == "neighbourhood" {
-            return location.label ?? ""
-        }
-        guard let nextLocation = location.locations?[0] else {
-            return ""
-        }
-        return getLocation(nextLocation)
     }
 }
