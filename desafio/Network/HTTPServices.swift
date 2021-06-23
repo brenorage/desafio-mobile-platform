@@ -18,7 +18,26 @@ extension HTTPServices: HTTPServicesProtocol {
             return
         }
 
-        networkSession.makeTask(with: url, httpMethod: endpoint.httpMethod.rawValue) { data, urlResponse, error in
+        makeRequest(with: url, endpoint.httpMethod.rawValue) { result in
+            switch result {
+            case let .success(data):
+                self.treatSuccess(data: data, completion: completion)
+            case let .failure(error):
+                completion(.failure(error))
+            }
+        }
+    }
+
+    func downloadData(from url: URL, completion: @escaping RequestCallback<Data>) {
+        makeRequest(with: url, HTTPMethod.get.rawValue, completion: completion)
+    }
+    
+    func cancelTasks() {
+        networkSession.task?.cancel()
+    }
+
+    private func makeRequest(with url: URL, _ httpMethod: String, completion: @escaping RequestCallback<Data>) {
+        networkSession.makeTask(with: url, httpMethod: httpMethod) { data, urlResponse, error in
             if  let error = error {
                 let nsError = error as NSError
                 completion(.failure(self.parseError(with: nsError.code)))
@@ -36,12 +55,8 @@ extension HTTPServices: HTTPServicesProtocol {
                 return
             }
 
-            self.treatSuccess(data: data, completion: completion)
+            completion(.success(data))
         }
-    }
-    
-    func cancelTasks() {
-        networkSession.task?.cancel()
     }
 
     private func treatSuccess<T: Decodable>(data: Data, completion: RequestCallback<T>) {

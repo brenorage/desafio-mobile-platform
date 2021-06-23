@@ -13,7 +13,7 @@ class AdListCardViewCell: UICollectionViewCell, Reusable {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var timeLocationLabel: UILabel!
-    @IBOutlet weak var adImageView: UIImageView!
+    @IBOutlet weak var adImageView: DownloadableImageView!
     @IBOutlet weak var adImageContainer: UIView!
     @IBOutlet weak var featuredBadge: UIView!
     @IBOutlet weak var featuredLine: UIView!
@@ -38,7 +38,8 @@ class AdListCardViewCell: UICollectionViewCell, Reusable {
         }
 
         guard let thumb = adDetail.thumbnail else { return }
-        let imageUrl = "\(String(describing: thumb.base_url))/images/\(String(describing: thumb.path))"
-        self.adImageView.downloaded(from: imageUrl)
+//        let imageUrl = "\(String(describing: thumb.base_url))/images/\(String(describing: thumb.path))"
+//        self.adImageView.downloaded(from: imageUrl)
+        adImageView.downloadImage(to: thumb)
     }
 }

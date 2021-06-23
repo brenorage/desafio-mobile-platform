@@ -50,7 +50,7 @@
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5XT-rX-IR4" userLabel="Image Container">
                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AdPhotoPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="4wx-vz-akk">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AdPhotoPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="4wx-vz-akk" customClass="DownloadableImageView" customModule="desafio" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qix-uI-BAp" userLabel="Featured Line">

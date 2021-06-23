@@ -47,6 +47,8 @@
 		C4C82192267FE55A00B331EE /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C8218E267FE55A00B331EE /* File.swift */; };
 		C4C82193267FE55A00B331EE /* EndpointMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C8218F267FE55A00B331EE /* EndpointMock.swift */; };
 		C4C82194267FE55A00B331EE /* HttpServicesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C82190267FE55A00B331EE /* HttpServicesTest.swift */; };
+		C4ED24C62682CF5D0063BF95 /* DownloadableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED24C52682CF5D0063BF95 /* DownloadableImageView.swift */; };
+		C4ED24CF2682CFB70063BF95 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED24CE2682CFB70063BF95 /* ImageService.swift */; };
 		C4F914FA2682308D00532AA7 /* AdsListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F914F92682308D00532AA7 /* AdsListService.swift */; };
 		C4F915002682320900532AA7 /* AdsListEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F914FF2682320900532AA7 /* AdsListEndpoint.swift */; };
 /* End PBXBuildFile section */
@@ -113,6 +115,8 @@
 		C4C8218E267FE55A00B331EE /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		C4C8218F267FE55A00B331EE /* EndpointMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointMock.swift; sourceTree = "<group>"; };
 		C4C82190267FE55A00B331EE /* HttpServicesTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpServicesTest.swift; sourceTree = "<group>"; };
+		C4ED24C52682CF5D0063BF95 /* DownloadableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadableImageView.swift; sourceTree = "<group>"; };
+		C4ED24CE2682CFB70063BF95 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		C4F914F92682308D00532AA7 /* AdsListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsListService.swift; sourceTree = "<group>"; };
 		C4F914FF2682320900532AA7 /* AdsListEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsListEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -242,6 +246,7 @@
 		C4C820F3267FA06800B331EE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C4ED24C42682CF2D0063BF95 /* UIKit */,
 				C4C3EE5E26828B880062C08C /* Extensions */,
 				C4C821A3267FE7BF00B331EE /* UIKitExtensions */,
 				C4C820F4267FA07200B331EE /* Nib */,
@@ -402,6 +407,23 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		C4ED24C42682CF2D0063BF95 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				C4ED24CD2682CF8D0063BF95 /* DownloadableImageView */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		C4ED24CD2682CF8D0063BF95 /* DownloadableImageView */ = {
+			isa = PBXGroup;
+			children = (
+				C4ED24C52682CF5D0063BF95 /* DownloadableImageView.swift */,
+				C4ED24CE2682CFB70063BF95 /* ImageService.swift */,
+			);
+			path = DownloadableImageView;
+			sourceTree = "<group>";
+		};
 		C4F914FE268230AA00532AA7 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -550,6 +572,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4ED24C62682CF5D0063BF95 /* DownloadableImageView.swift in Sources */,
 				C4C820FE267FA07200B331EE /* UICollectionView+Reusable.swift in Sources */,
 				6C19D334262F127B00068196 /* UIImageView+Extension.swift in Sources */,
 				C4C820FC267FA07200B331EE /* UINib+Instantiate.swift in Sources */,
@@ -572,6 +595,7 @@
 				C4C8217E267FD8F400B331EE /* HTTPServices.swift in Sources */,
 				C4C3EE002682868C0062C08C /* AdsListPresenter.swift in Sources */,
 				C4C8217F267FD8F400B331EE /* NetworkError.swift in Sources */,
+				C4ED24CF2682CFB70063BF95 /* ImageService.swift in Sources */,
 				C4C3EE6026828B960062C08C /* Collection+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

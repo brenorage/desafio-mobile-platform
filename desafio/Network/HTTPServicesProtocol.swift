@@ -5,6 +5,7 @@ public typealias HeadersParams = [String : String]
 
 protocol HTTPServicesProtocol {
     func request<T: Decodable>(endpoint: EndpointProtocol, completion: @escaping RequestCallback<T>)
+    func downloadData(from url: URL, completion: @escaping RequestCallback<Data>)
     func cancelTasks()
 }
 
